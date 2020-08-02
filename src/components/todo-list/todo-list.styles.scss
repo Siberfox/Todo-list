@@ -1,24 +1,5 @@
-.todo-list {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  width: 50%;
-  height: 100%;
-  margin: auto;
-  border-radius: 15px;
-  background-color: white;
-  color: lighten(black, 20%);
-  overflow: auto;
-  padding: 0;
-  .title {
-    font-size: 25px;
-    text-align: center;
-    margin-top: 40px;
-  }
-}
-
-@media (max-width: 1000px) {
-  .todo-list {
-    width: 90%;
-  }
+.todo-item {
+  margin-left: 100px;
+  margin-bottom: 20px;
+  text-align: left;
 }

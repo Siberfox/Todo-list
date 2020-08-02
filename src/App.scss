@@ -3,4 +3,28 @@
   text-align: center;
   height: calc(100vh - 40px);
   background-color: #bfc0c0;
+  font-family: "Rubik", sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  border-radius: 15px;
+  background-color: white;
+  color: lighten(black, 20%);
+  overflow: auto;
+  padding: 0;
+}
+.title {
+  font-size: 25px;
+  text-align: center;
+  margin-top: 40px;
+}
+@media (max-width: 1000px) {
+  .container {
+    width: 90%;
+  }
 }
