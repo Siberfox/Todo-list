@@ -1,0 +1,18 @@
+.todo-list {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: left;
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  border-radius: 15px;
+  background-color: white;
+  color: lighten(black, 20%);
+  .title {
+    margin-top: 110px;
+    margin-left: 100px;
+    margin-bottom: 40px;
+    font-size: 25px;
+  }
+}

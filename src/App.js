@@ -1,20 +1,20 @@
 import React from "react";
 import { TodoList } from "./components/todo-list/todo-list.component";
 
-import "./App.css";
+import "normalize.css";
+import "./App.scss";
 
 class App extends React.Component {
   constructor() {
     super();
 
-    this.state = {};
+    this.state = { items: ["First", "Second", "Third"] };
   }
 
   render() {
     return (
       <div className="App">
-        <h1> Todo list </h1>
-        <TodoList></TodoList>
+        <TodoList items={this.state.items}></TodoList>
       </div>
     );
   }
