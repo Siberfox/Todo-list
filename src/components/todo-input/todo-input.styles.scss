@@ -1,0 +1,11 @@
+.todo-input {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+  &_field {
+    width: 70%;
+  }
+  &_button {
+    margin-left: 10px;
+  }
+}
