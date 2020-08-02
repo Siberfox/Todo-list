@@ -1,5 +1,5 @@
 import React from "react";
-import todoList from "./components/todo-list/todo-list.component";
+import { TodoList } from "./components/todo-list/todo-list.component";
 
 import "./App.css";
 
@@ -14,8 +14,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1> Todo list </h1>
-        <input> Add </input>
-        <todoList></todoList>
+        <TodoList></TodoList>
       </div>
     );
   }

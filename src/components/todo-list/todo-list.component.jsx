@@ -1,14 +1,14 @@
 import React from "react";
-import { todoItem } from "../todo-item/todo-item.component";
+import { TodoItem } from "../todo-item/todo-item.component";
 
-import "./todo-list.styles.scss";
+// import "./todo-list.styles.scss";
 
-export const todoList = (props) => {
+export const TodoList = (props) => {
   return (
     <ul className="todo-list">
-      <todoItem />
-      <todoItem />
-      <todoItem />
+      <TodoItem />
+      <TodoItem />
+      <TodoItem />
     </ul>
   );
 };
