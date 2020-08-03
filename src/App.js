@@ -10,7 +10,7 @@ class App extends React.Component {
     super();
 
     this.state = {
-      items: ["Clean the house🐼", "Meeting with John", "Go to the shop"],
+      items: ["Clean the house🐼", "Meeting with John", "Go to the shop🛒"],
       inputValue: "",
       hidden: true,
     };
@@ -31,7 +31,7 @@ class App extends React.Component {
   };
 
   addEmoji = (e) => {
-    let emoji = e.native;
+    let emoji = e.target.textContent;
     this.setState({
       inputValue: this.state.inputValue + emoji,
     });

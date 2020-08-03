@@ -1,13 +1,98 @@
 import React from "react";
 
-import { Picker } from "emoji-mart";
-
 import "./emoji-picker.styles.scss";
 
 export const EmojiPicker = ({ addEmoji }) => {
   return (
-    <span className="emoji-picker">
-      <Picker showPreview={false} showSkinTones={false} onSelect={addEmoji} />
-    </span>
+    <div className="emoji-picker">
+      <span
+        className="emoji-item"
+        onClick={addEmoji}
+        role="img"
+        aria-label="Document"
+      >
+        📝
+      </span>
+      <span
+        className="emoji-item"
+        onClick={addEmoji}
+        role="img"
+        aria-label="Bed"
+      >
+        🛌
+      </span>
+      <span
+        className="emoji-item"
+        onClick={addEmoji}
+        role="img"
+        aria-label="Time"
+      >
+        ⌚
+      </span>
+      <span
+        className="emoji-item"
+        onClick={addEmoji}
+        role="img"
+        aria-label="Knife"
+      >
+        🔪
+      </span>
+      <span
+        className="emoji-item"
+        onClick={addEmoji}
+        role="img"
+        aria-label="Bomb"
+      >
+        💣
+      </span>
+      <span
+        className="emoji-item"
+        onClick={addEmoji}
+        role="img"
+        aria-label="Holiday"
+      >
+        🎉
+      </span>
+      <span
+        className="emoji-item"
+        onClick={addEmoji}
+        role="img"
+        aria-label="Gift"
+      >
+        🎁
+      </span>
+      <span
+        className="emoji-item"
+        onClick={addEmoji}
+        role="img"
+        aria-label="Phone"
+      >
+        📞
+      </span>
+      <span
+        className="emoji-item"
+        onClick={addEmoji}
+        role="img"
+        aria-label="computer"
+      >
+        🖥️
+      </span>
+      <span
+        className="emoji-item"
+        onClick={addEmoji}
+        role="img"
+        aria-label="Money"
+      >
+        💰
+      </span>
+      <span
+        className="emoji-item"
+        onClick={addEmoji}
+        role="img"
+        aria-label="Shop"
+      >
+        🛒
+      </span>
+    </div>
   );
 };
