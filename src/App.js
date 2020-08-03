@@ -9,7 +9,11 @@ class App extends React.Component {
   constructor() {
     super();
 
-    this.state = { items: ["First", "Second", "Third"], inputValue: "" };
+    this.state = {
+      items: ["Clean the house🐼", "Meeting with John", "Go to the shop"],
+      inputValue: "",
+      hidden: true,
+    };
   }
 
   addItem = (event) => {
@@ -17,9 +21,24 @@ class App extends React.Component {
 
     const { value } = event.target.text;
 
-    this.setState({ items: [...this.state.items, value], inputValue: "" });
+    this.setState({
+      items: [...this.state.items, value],
+      inputValue: "",
+      hidden: true,
+    });
 
     event.target.text.value = "";
+  };
+
+  addEmoji = (e) => {
+    let emoji = e.native;
+    this.setState({
+      inputValue: this.state.inputValue + emoji,
+    });
+  };
+
+  toggleEmojiHidden = () => {
+    this.setState({ hidden: !this.state.hidden });
   };
 
   handleChange = (event) => {
@@ -35,6 +54,9 @@ class App extends React.Component {
             addItem={this.addItem}
             inputValue={this.state.inputValue}
             handleChange={this.handleChange}
+            addEmoji={this.addEmoji}
+            hidden={this.state.hidden}
+            toggleEmojiHidden={this.toggleEmojiHidden}
           />
           <TodoList items={this.state.items}></TodoList>
         </div>

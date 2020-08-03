@@ -2,7 +2,18 @@ import React from "react";
 
 import "./todo-submit.styles.scss";
 
-export const TodoSubmit = ({ addItem, inputValue, handleChange }) => {
+import "emoji-mart/css/emoji-mart.css";
+import { ReactComponent as EmojiIcon } from "../../assets/emoji.svg";
+import { EmojiPicker } from "../emoji-picker/emoji-picker.component";
+
+export const TodoSubmit = ({
+  addItem,
+  inputValue,
+  handleChange,
+  addEmoji,
+  hidden,
+  toggleEmojiHidden,
+}) => {
   return (
     <form onSubmit={addItem} className="todo-submit">
       <input
@@ -14,6 +25,10 @@ export const TodoSubmit = ({ addItem, inputValue, handleChange }) => {
         placeholder="add a new todo..."
         required
       />
+      <div className="emoji-icon" onClick={toggleEmojiHidden}>
+        <EmojiIcon />
+      </div>
+      {hidden ? null : <EmojiPicker addEmoji={addEmoji} />}
       <button type="submit" className="todo-submit_button">
         Add
       </button>
