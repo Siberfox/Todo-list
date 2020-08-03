@@ -1,5 +1,8 @@
 .todo-item {
-  margin-left: 70px;
   margin-bottom: 20px;
   text-align: left;
+  word-wrap: break-word;
+}
+.todo-list {
+  padding: 0;
 }
