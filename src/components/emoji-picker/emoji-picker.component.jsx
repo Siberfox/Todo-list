@@ -73,14 +73,6 @@ export const EmojiPicker = ({ addEmoji }) => {
         className="emoji-item"
         onClick={addEmoji}
         role="img"
-        aria-label="computer"
-      >
-        🖥️
-      </span>
-      <span
-        className="emoji-item"
-        onClick={addEmoji}
-        role="img"
         aria-label="Money"
       >
         💰
@@ -89,7 +81,7 @@ export const EmojiPicker = ({ addEmoji }) => {
         className="emoji-item"
         onClick={addEmoji}
         role="img"
-        aria-label="Shop"
+        aria-label="Shop cart"
       >
         🛒
       </span>
