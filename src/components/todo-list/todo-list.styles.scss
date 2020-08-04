@@ -6,6 +6,11 @@
   &_text {
     max-width: 70%;
     word-wrap: break-word;
+    cursor: pointer;
+  }
+  .hidden {
+    color: green;
+    text-decoration: line-through;
   }
 }
 .todo-list {
@@ -13,6 +18,7 @@
   max-width: 100%;
 }
 .trash-icon {
+  cursor: pointer;
   &:hover {
     .trash {
       fill: darken(#d90429, 20%);

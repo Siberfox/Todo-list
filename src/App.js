@@ -10,7 +10,11 @@ class App extends React.Component {
     super();
 
     this.state = {
-      items: ["Clean the house🐼", "Meeting with John", "Go to the shop🛒"],
+      items: [
+        { text: "Clean the house🐼", completed: false },
+        { text: "Meeting with John", completed: false },
+        { text: "Go to the shop🛒", completed: false },
+      ],
       inputValue: "",
       hidden: true,
     };
@@ -21,11 +25,11 @@ class App extends React.Component {
 
     const { value } = event.target.text;
 
-    this.setState({
-      items: [...this.state.items, value],
+    this.setState((state) => ({
+      items: [...state.items, { text: value, completed: false }],
       inputValue: "",
       hidden: true,
-    });
+    }));
 
     event.target.text.value = "";
   };
@@ -53,6 +57,17 @@ class App extends React.Component {
     this.setState({ inputValue: event.target.value });
   };
 
+  handleClick = (id) => {
+    this.setState({
+      items: this.state.items.map((item, index) => {
+        if (index === id) {
+          item.completed = !item.completed;
+        }
+        return item;
+      }),
+    });
+  };
+
   render() {
     return (
       <div className="App">
@@ -68,6 +83,8 @@ class App extends React.Component {
           />
           <TodoList
             items={this.state.items}
+            complete={this.state.complete}
+            handleClick={this.handleClick}
             removeItem={this.removeItem}
           ></TodoList>
         </div>
