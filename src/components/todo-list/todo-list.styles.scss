@@ -1,8 +1,26 @@
 .todo-item {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 20px;
   text-align: left;
-  word-wrap: break-word;
+  &_text {
+    max-width: 70%;
+    word-wrap: break-word;
+  }
 }
 .todo-list {
   padding: 0;
+  max-width: 100%;
+}
+.trash-icon {
+  &:hover {
+    .trash {
+      fill: darken(#d90429, 20%);
+    }
+  }
+  &:active {
+    .trash {
+      fill: #d90429;
+    }
+  }
 }

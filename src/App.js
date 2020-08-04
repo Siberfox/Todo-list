@@ -30,10 +30,18 @@ class App extends React.Component {
     event.target.text.value = "";
   };
 
-  addEmoji = (e) => {
-    let emoji = e.target.textContent;
+  addEmoji = (event) => {
+    let emoji = event.target.textContent;
     this.setState({
       inputValue: this.state.inputValue + emoji,
+    });
+  };
+
+  removeItem = (id) => {
+    this.setState({
+      items: this.state.items.filter((item, index) => {
+        return index !== id;
+      }),
     });
   };
 
@@ -58,7 +66,10 @@ class App extends React.Component {
             hidden={this.state.hidden}
             toggleEmojiHidden={this.toggleEmojiHidden}
           />
-          <TodoList items={this.state.items}></TodoList>
+          <TodoList
+            items={this.state.items}
+            removeItem={this.removeItem}
+          ></TodoList>
         </div>
       </div>
     );
