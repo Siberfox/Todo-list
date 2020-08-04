@@ -22,7 +22,7 @@ export const TodoSubmit = ({
         name="text"
         value={inputValue}
         onChange={handleChange}
-        placeholder="add a new todo..."
+        placeholder="add todo..."
         required
       />
       <div className="emoji-icon" onClick={toggleEmojiHidden}>
