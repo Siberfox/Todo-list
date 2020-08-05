@@ -2,89 +2,19 @@ import React from "react";
 
 import "./emoji-picker.styles.scss";
 
-export const EmojiPicker = ({ addEmoji }) => {
+export const EmojiPicker = ({ addEmoji, emoji }) => {
   return (
     <div className="emoji-picker">
-      <span
-        className="emoji-item"
-        onClick={addEmoji}
-        role="img"
-        aria-label="Document"
-      >
-        📝
-      </span>
-      <span
-        className="emoji-item"
-        onClick={addEmoji}
-        role="img"
-        aria-label="Bed"
-      >
-        🛌
-      </span>
-      <span
-        className="emoji-item"
-        onClick={addEmoji}
-        role="img"
-        aria-label="Time"
-      >
-        ⌚
-      </span>
-      <span
-        className="emoji-item"
-        onClick={addEmoji}
-        role="img"
-        aria-label="Knife"
-      >
-        🔪
-      </span>
-      <span
-        className="emoji-item"
-        onClick={addEmoji}
-        role="img"
-        aria-label="Bomb"
-      >
-        💣
-      </span>
-      <span
-        className="emoji-item"
-        onClick={addEmoji}
-        role="img"
-        aria-label="Holiday"
-      >
-        🎉
-      </span>
-      <span
-        className="emoji-item"
-        onClick={addEmoji}
-        role="img"
-        aria-label="Gift"
-      >
-        🎁
-      </span>
-      <span
-        className="emoji-item"
-        onClick={addEmoji}
-        role="img"
-        aria-label="Phone"
-      >
-        📞
-      </span>
-      <span
-        className="emoji-item"
-        onClick={addEmoji}
-        role="img"
-        aria-label="Money"
-      >
-        💰
-      </span>
-      <span
-        className="emoji-item"
-        onClick={addEmoji}
-        role="img"
-        aria-label="Shop cart"
-      >
-        🛒
-      </span>
+      {emoji.map((item) => (
+        <span
+          className="emoji-item"
+          onClick={addEmoji}
+          role="img"
+          aria-label={item.label}
+        >
+          {item.sign}
+        </span>
+      ))}
     </div>
   );
 };

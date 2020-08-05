@@ -11,6 +11,7 @@ export const TodoSubmit = ({
   inputValue,
   handleChange,
   addEmoji,
+  emoji,
   hidden,
   toggleEmojiHidden,
 }) => {
@@ -28,7 +29,7 @@ export const TodoSubmit = ({
       <div className="emoji-icon" onClick={toggleEmojiHidden}>
         <EmojiIcon />
       </div>
-      {hidden ? null : <EmojiPicker addEmoji={addEmoji} />}
+      {hidden ? null : <EmojiPicker addEmoji={addEmoji} emoji={emoji} />}
       <button type="submit" className="todo-submit_button">
         Add
       </button>

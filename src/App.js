@@ -15,6 +15,18 @@ class App extends React.Component {
         { text: "Meeting with John", completed: false },
         { text: "Go to the shop🛒", completed: false },
       ],
+      emoji: [
+        { label: "Document", sign: "📝" },
+        { label: "Bed", sign: "🛌" },
+        { label: "Time", sign: "⌚" },
+        { label: "Knife", sign: "🔪" },
+        { label: "Bomb", sign: "💣" },
+        { label: "Holiday", sign: "🎉" },
+        { label: "Gift", sign: "🎁" },
+        { label: "Phone", sign: "📞" },
+        { label: "Money", sign: "💰" },
+        { label: "Shop cart", sign: "🛒" },
+      ],
       inputValue: "",
       hidden: true,
     };
@@ -76,6 +88,7 @@ class App extends React.Component {
           <TodoSubmit
             addItem={this.addItem}
             inputValue={this.state.inputValue}
+            emoji={this.state.emoji}
             handleChange={this.handleChange}
             addEmoji={this.addEmoji}
             hidden={this.state.hidden}
