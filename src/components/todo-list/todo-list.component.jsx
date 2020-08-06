@@ -7,15 +7,18 @@ import "./todo-list.styles.scss";
 export const TodoList = ({ items, removeItem, handleClick }) => {
   return (
     <ul className="todo-list">
-      {items.map((item, index) => (
-        <li key={index} className="todo-item">
+      {items.map((item) => (
+        <li key={item.id} className="todo-item">
           <span
             className={`todo-item_text ${item.completed ? "hidden" : ""}`}
-            onClick={() => handleClick(index)}
+            onClick={() => handleClick(item.id)}
           >
             {item.text}
           </span>
-          <TrashIcon className="trash-icon" onClick={() => removeItem(index)} />
+          <TrashIcon
+            className="trash-icon"
+            onClick={() => removeItem(item.id)}
+          />
         </li>
       ))}
     </ul>

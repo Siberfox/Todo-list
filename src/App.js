@@ -1,6 +1,7 @@
 import React from "react";
 import { TodoList } from "./components/todo-list/todo-list.component";
 import { TodoSubmit } from "./components/todo-submit/todo-submit.component";
+import { nanoid } from "nanoid";
 
 import "normalize.css";
 import "./App.scss";
@@ -11,9 +12,9 @@ class App extends React.Component {
 
     this.state = {
       items: [
-        { text: "Clean the house🐼", completed: false },
-        { text: "Meeting with John", completed: false },
-        { text: "Go to the shop🛒", completed: false },
+        { text: "Clean the house🐼", completed: false, id: nanoid() },
+        { text: "Meeting with John", completed: false, id: nanoid() },
+        { text: "Go to the shop🛒", completed: false, id: nanoid() },
       ],
       emoji: [
         { label: "Document", sign: "📝" },
@@ -38,7 +39,7 @@ class App extends React.Component {
     const { value } = event.target.text;
 
     this.setState((state) => ({
-      items: [...state.items, { text: value, completed: false }],
+      items: [...state.items, { text: value, completed: false, id: nanoid() }],
       inputValue: "",
       hidden: true,
     }));
@@ -55,8 +56,8 @@ class App extends React.Component {
 
   removeItem = (id) => {
     this.setState({
-      items: this.state.items.filter((item, index) => {
-        return index !== id;
+      items: this.state.items.filter((item) => {
+        return item.id !== id;
       }),
     });
   };
@@ -71,8 +72,8 @@ class App extends React.Component {
 
   handleClick = (id) => {
     this.setState({
-      items: this.state.items.map((item, index) => {
-        if (index === id) {
+      items: this.state.items.map((item) => {
+        if (item.id === id) {
           item.completed = !item.completed;
         }
         return item;
