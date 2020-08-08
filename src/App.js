@@ -43,8 +43,6 @@ class App extends React.Component {
       inputValue: "",
       hidden: true,
     }));
-
-    event.target.text.value = "";
   };
 
   addEmoji = (event) => {
