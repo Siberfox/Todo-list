@@ -1,1 +1,3 @@
-[Demo](https://siberfox.github.io/Todo-list/ "Demo")
+## Todo list 📝
+
+Simple todo list made using React.
