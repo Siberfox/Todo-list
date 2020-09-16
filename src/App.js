@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { TodoList } from "./components/todo-list/todo-list.component";
 import { TodoSubmit } from "./components/todo-submit/todo-submit.component";
 import { nanoid } from "nanoid";
@@ -6,103 +6,77 @@ import { nanoid } from "nanoid";
 import "normalize.css";
 import "./App.scss";
 
-class App extends React.Component {
-  constructor() {
-    super();
+const App = () => {
+  const [items, setItems] = useState([
+    { text: "Clean the house🐼", completed: false, id: nanoid() },
+    { text: "Meeting with John", completed: false, id: nanoid() },
+    { text: "Go to the shop🛒", completed: false, id: nanoid() },
+  ]);
+  const [inputValue, setInputValue] = useState("");
+  const [hidden, setHidden] = useState(true);
 
-    this.state = {
-      items: [
-        { text: "Clean the house🐼", completed: false, id: nanoid() },
-        { text: "Meeting with John", completed: false, id: nanoid() },
-        { text: "Go to the shop🛒", completed: false, id: nanoid() },
-      ],
-      emoji: [
-        { label: "Document", sign: "📝" },
-        { label: "Bed", sign: "🛌" },
-        { label: "Time", sign: "⌚" },
-        { label: "Knife", sign: "🔪" },
-        { label: "Bomb", sign: "💣" },
-        { label: "Holiday", sign: "🎉" },
-        { label: "Gift", sign: "🎁" },
-        { label: "Phone", sign: "📞" },
-        { label: "Money", sign: "💰" },
-        { label: "Shop cart", sign: "🛒" },
-      ],
-      inputValue: "",
-      hidden: true,
-    };
-  }
-
-  addItem = (event) => {
+  const addItem = (event) => {
     event.preventDefault();
 
     const { value } = event.target.text;
 
-    this.setState((state) => ({
-      items: [...state.items, { text: value, completed: false, id: nanoid() }],
-      inputValue: "",
-      hidden: true,
-    }));
+    setItems([...items, { text: value, completed: false, id: nanoid() }]);
+    setInputValue("");
+    setHidden(true);
   };
 
-  addEmoji = (event) => {
+  const addEmoji = (event) => {
     let emoji = event.target.textContent;
-    this.setState({
-      inputValue: this.state.inputValue + emoji,
-    });
+    setInputValue(inputValue + emoji);
   };
 
-  removeItem = (id) => {
-    this.setState({
-      items: this.state.items.filter((item) => {
+  const removeItem = (id) => {
+    setItems(
+      items.filter((item) => {
         return item.id !== id;
-      }),
-    });
+      })
+    );
   };
 
-  toggleEmojiHidden = () => {
-    this.setState({ hidden: !this.state.hidden });
+  const toggleEmojiHidden = () => {
+    setHidden(!hidden);
   };
 
-  handleChange = (event) => {
-    this.setState({ inputValue: event.target.value });
+  const handleChange = (event) => {
+    setInputValue(event.target.value);
   };
 
-  handleClick = (id) => {
-    this.setState({
-      items: this.state.items.map((item) => {
+  const handleClick = (id) => {
+    setItems(
+      items.map((item) => {
         if (item.id === id) {
           item.completed = !item.completed;
         }
         return item;
-      }),
-    });
+      })
+    );
   };
 
-  render() {
-    return (
-      <div className="App">
-        <div className="container">
-          <h1 className="title">TODO LIST</h1>
-          <TodoSubmit
-            addItem={this.addItem}
-            inputValue={this.state.inputValue}
-            emoji={this.state.emoji}
-            handleChange={this.handleChange}
-            addEmoji={this.addEmoji}
-            hidden={this.state.hidden}
-            toggleEmojiHidden={this.toggleEmojiHidden}
-          />
-          <TodoList
-            items={this.state.items}
-            complete={this.state.complete}
-            handleClick={this.handleClick}
-            removeItem={this.removeItem}
-          ></TodoList>
-        </div>
+  return (
+    <div className="App">
+      <div className="container">
+        <h1 className="title">TODO LIST</h1>
+        <TodoSubmit
+          addItem={addItem}
+          inputValue={inputValue}
+          handleChange={handleChange}
+          addEmoji={addEmoji}
+          hidden={hidden}
+          toggleEmojiHidden={toggleEmojiHidden}
+        />
+        <TodoList
+          items={items}
+          handleClick={handleClick}
+          removeItem={removeItem}
+        ></TodoList>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default App;
