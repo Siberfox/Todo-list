@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/Todo-list/static/css/main.6de30804.chunk.css",
-    "main.js": "/Todo-list/static/js/main.2bc4a538.chunk.js",
-    "main.js.map": "/Todo-list/static/js/main.2bc4a538.chunk.js.map",
+    "main.js": "/Todo-list/static/js/main.06b7fc25.chunk.js",
+    "main.js.map": "/Todo-list/static/js/main.06b7fc25.chunk.js.map",
     "runtime-main.js": "/Todo-list/static/js/runtime-main.f69f18a5.js",
     "runtime-main.js.map": "/Todo-list/static/js/runtime-main.f69f18a5.js.map",
-    "static/css/2.075024c3.chunk.css": "/Todo-list/static/css/2.075024c3.chunk.css",
-    "static/js/2.ed8dfb48.chunk.js": "/Todo-list/static/js/2.ed8dfb48.chunk.js",
-    "static/js/2.ed8dfb48.chunk.js.map": "/Todo-list/static/js/2.ed8dfb48.chunk.js.map",
+    "static/css/2.764ccc25.chunk.css": "/Todo-list/static/css/2.764ccc25.chunk.css",
+    "static/js/2.56ce4d3d.chunk.js": "/Todo-list/static/js/2.56ce4d3d.chunk.js",
+    "static/js/2.56ce4d3d.chunk.js.map": "/Todo-list/static/js/2.56ce4d3d.chunk.js.map",
     "index.html": "/Todo-list/index.html",
-    "precache-manifest.7a0f9ca006f018d5cd6298c744243305.js": "/Todo-list/precache-manifest.7a0f9ca006f018d5cd6298c744243305.js",
+    "precache-manifest.244a13fe1b9ac6697b81ad27bbe61712.js": "/Todo-list/precache-manifest.244a13fe1b9ac6697b81ad27bbe61712.js",
     "service-worker.js": "/Todo-list/service-worker.js",
-    "static/css/2.075024c3.chunk.css.map": "/Todo-list/static/css/2.075024c3.chunk.css.map",
+    "static/css/2.764ccc25.chunk.css.map": "/Todo-list/static/css/2.764ccc25.chunk.css.map",
     "static/css/main.6de30804.chunk.css.map": "/Todo-list/static/css/main.6de30804.chunk.css.map",
-    "static/js/2.ed8dfb48.chunk.js.LICENSE.txt": "/Todo-list/static/js/2.ed8dfb48.chunk.js.LICENSE.txt",
+    "static/js/2.56ce4d3d.chunk.js.LICENSE.txt": "/Todo-list/static/js/2.56ce4d3d.chunk.js.LICENSE.txt",
     "static/media/Trash.af29226b.svg": "/Todo-list/static/media/Trash.af29226b.svg",
     "static/media/emoji.c26ef866.svg": "/Todo-list/static/media/emoji.c26ef866.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.f69f18a5.js",
-    "static/css/2.075024c3.chunk.css",
-    "static/js/2.ed8dfb48.chunk.js",
+    "static/css/2.764ccc25.chunk.css",
+    "static/js/2.56ce4d3d.chunk.js",
     "static/css/main.6de30804.chunk.css",
-    "static/js/main.2bc4a538.chunk.js"
+    "static/js/main.06b7fc25.chunk.js"
   ]
 }
