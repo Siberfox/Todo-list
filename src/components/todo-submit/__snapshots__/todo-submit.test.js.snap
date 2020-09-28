@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`todo submit should render component 1`] = `
+<form
+  className="todo-submit"
+  onSubmit={[MockFunction]}
+>
+  <input
+    className="todo-submit_input"
+    name="text"
+    onChange={[MockFunction]}
+    placeholder="add todo..."
+    required={true}
+    type="text"
+    value="todo"
+  />
+  <div
+    className="emoji-icon"
+    onClick={[MockFunction]}
+  >
+    <ForwardRef(SvgEmoji) />
+  </div>
+  <EmojiPicker
+    addEmoji={[MockFunction]}
+  />
+  <button
+    className="todo-submit_button"
+    type="submit"
+  >
+    Add
+  </button>
+</form>
+`;

@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Todo-list should render todo-list component 1`] = `
+<ul
+  className="todo-list"
+>
+  <li
+    className="todo-item"
+    key="1"
+  >
+    <span
+      className="todo-item_text "
+      onClick={[Function]}
+    >
+      first
+    </span>
+    <ForwardRef(SvgTrash)
+      className="trash-icon"
+      onClick={[Function]}
+    />
+  </li>
+  <li
+    className="todo-item"
+    key="2"
+  >
+    <span
+      className="todo-item_text "
+      onClick={[Function]}
+    >
+      second
+    </span>
+    <ForwardRef(SvgTrash)
+      className="trash-icon"
+      onClick={[Function]}
+    />
+  </li>
+</ul>
+`;

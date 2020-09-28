@@ -2,17 +2,17 @@ import React from "react";
 
 import "./emoji-picker.styles.scss";
 
-const emoji = [
-  { label: "Document", sign: "📝" },
-  { label: "Bed", sign: "🛌" },
-  { label: "Time", sign: "⌚" },
-  { label: "Knife", sign: "🔪" },
-  { label: "Bomb", sign: "💣" },
-  { label: "Holiday", sign: "🎉" },
-  { label: "Gift", sign: "🎁" },
-  { label: "Phone", sign: "📞" },
-  { label: "Money", sign: "💰" },
-  { label: "Shop cart", sign: "🛒" },
+export const emoji = [
+  { id: 1, label: "Document", sign: "📝" },
+  { id: 2, label: "Bed", sign: "🛌" },
+  { id: 3, label: "Time", sign: "⌚" },
+  { id: 4, label: "Knife", sign: "🔪" },
+  { id: 5, label: "Bomb", sign: "💣" },
+  { id: 6, label: "Holiday", sign: "🎉" },
+  { id: 7, label: "Gift", sign: "🎁" },
+  { id: 8, label: "Phone", sign: "📞" },
+  { id: 9, label: "Money", sign: "💰" },
+  { id: 10, label: "Shop cart", sign: "🛒" },
 ];
 
 export const EmojiPicker = ({ addEmoji }) => {
@@ -24,6 +24,7 @@ export const EmojiPicker = ({ addEmoji }) => {
           onClick={addEmoji}
           role="img"
           aria-label={item.label}
+          key={item.id}
         >
           {item.sign}
         </span>
